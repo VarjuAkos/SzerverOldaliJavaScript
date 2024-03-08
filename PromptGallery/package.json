@@ -1,0 +1,16 @@
+{
+  "name": "promptgallery",
+  "version": "1.0.0",
+  "description": "The purpose of the PromptGallery application is to allow users to upload their generated images and keep track of the prompts used to create each image.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.3",
+    "path": "^0.12.7"
+  }
+}

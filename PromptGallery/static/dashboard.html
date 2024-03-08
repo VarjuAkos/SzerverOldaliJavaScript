@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Dashboard</title>
+    <style>
+        .image-block {
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .image-block img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .btn-add-masterpiece {
+            padding: 0.5rem 2rem;
+            font-size: 1rem;
+            background-color: #007bff;
+            border-color: #007bff;
+            color: white;
+            display: block;
+            width: 200px;
+            /* Adjust as needed for your design */
+            margin: 20px auto;
+            /* Centers the button */
+        }
+
+        .logout {
+            position: fixed;
+            /* Fixed position relative to the viewport */
+            top: 20px;
+            /* 20 pixels from the top */
+            right: 20px;
+            /* 20 pixels from the right */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <a href="login.html" class="btn btn-warning logout">Logout</a>
+        <h1>Welcome back!</h1>
+        <p>Your gallery:</p>
+
+        <!-- Mockup Image 1 -->
+        <div class="image-block">
+            <img src="https://ucarecdn.com/f53c93f5-c330-412b-88b5-844e8a1193cf/-/preview/1000x562/"
+                alt="Mockup Image 1" />
+            <h4>ID: 123</h4>
+            <p>Prompt: A serene landscape with mountains in the background and a clear blue lake in the foreground.</p>
+            <a href="edit.html" class="btn btn-primary">Edit</a>
+            <button class="btn btn-danger">Delete</button>
+        </div>
+
+        <!-- Mockup Image 2 -->
+        <div class="image-block">
+            <img src="https://ucarecdn.com/4cec72f4-2f83-497e-8d38-a9ffd9d032c6/-/preview/750x1000/"
+                alt="Mockup Image 2" />
+            <h4>ID: 456</h4>
+            <p>Prompt: Cool dog.</p>
+            <a href="edit.html" class="btn btn-primary">Edit</a>
+            <button class="btn btn-danger">Delete</button>
+        </div>
+
+        <!-- Mockup Image 3 -->
+        <div class="image-block">
+            <img src="https://ucarecdn.com/5400667b-3ac7-4da0-a180-2651c81558ef/-/preview/791x1000/"
+                alt="Mockup Image 3" />
+            <h4>ID: 789</h4>
+            <p>Prompt: Handsome JavaScript teacher.</p>
+            <a href="edit.html" class="btn btn-primary">Edit</a>
+            <button class="btn btn-danger">Delete</button>
+        </div>
+
+        <!-- Add Masterpiece Button -->
+        <a href="new-image.html" class="btn btn-primary">Add Masterpiece</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

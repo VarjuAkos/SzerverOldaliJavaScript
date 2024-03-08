@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Edit Prompt</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Edit Prompt</h1>
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <!-- Mockup Image -->
+                <div class="text-center mb-4">
+                    <img src="https://ucarecdn.com/f53c93f5-c330-412b-88b5-844e8a1193cf/-/preview/1000x562/" alt="Image to edit" class="img-thumbnail" style="max-width: 300px;">
+                </div>
+
+                <!-- Edit Prompt Form -->
+                <form action="path_to_server_endpoint" method="post">
+                    <input type="hidden" name="image_id" value="123"> <!-- Hidden field for the image ID -->
+                    
+                    <div class="form-group">
+                        <label for="prompt">Image Prompt</label>
+                        <textarea class="form-control" id="prompt" name="prompt" rows="3" required>A serene landscape with mountains...</textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                    <a href="dashboard.html" class="btn btn-secondary">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
