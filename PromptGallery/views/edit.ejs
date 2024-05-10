@@ -1,0 +1,30 @@
+<%- include('header') -%>
+    <title>Edit Prompt</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Edit Prompt</h1>
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+
+                <!-- Mockup Image ejs -->
+                <div class="text-center mb-4">
+                    <img src="http://localhost:3000/<%= image.file_path %>" alt="Image to edit" class="img-thumbnail" style="max-width: 600px;">
+                </div>
+                <!-- Edit Prompt Form ejs -->
+                <form method="POST">
+                    <input type="hidden" name="image_id" value="<%= image._id %>"> <!-- Hidden field for the image ID -->
+
+                    <div class="form-group">
+                        <label for="prompt">Image Prompt</label>
+                        <textarea class="form-control" id="prompt" name="prompt" rows="3" required> <%= image.prompt %> </textarea>
+                    </div>
+                    <!-- Button to save TODO  atgondolni whats happening : middleware lefut ha type = sumbit akkor save ha nem akkor nem-->
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                    <a onclick="window.location.href ='/dashboard/<%= user._id %>';" class="btn btn-secondary">Cancel</a>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <%- include('header') -%>

@@ -1,0 +1,53 @@
+<%- include('header') -%>
+    <title>Dashboard</title>
+    <style>
+        .image-block {
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .image-block img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .logout {
+            position: fixed;
+            /* Fixed position relative to the viewport */
+            top: 20px;
+            /* 20 pixels from the top */
+            right: 20px;
+            /* 20 pixels from the right */
+        }
+    </style>
+
+<body>
+    <div class="container mt-5">
+        <a onclick="window.location.href ='/login';" class="btn btn-warning logout">Logout</a>
+        <h1>Welcome back <%= user.username %>!</h1>
+        <p>Your gallery:</p>
+
+
+        <% images.forEach(function(egyImage){ %>
+        <div class="image-block">
+            <img src = "http://localhost:3000/<%= egyImage.file_path %> "
+                alt="image <%= egyImage.file_path %>" style="max-width: 600px;" />
+            <h4><%= egyImage._id %></h4>
+            <p>Prompt: <%= egyImage.prompt %></p>
+            <a onclick="window.location.href ='/dashboard/<%= user._id %>/image/edit/<%= egyImage._id %>';" class="btn btn-primary">Edit</a>
+            <button onclick="window.location.href ='/dashboard/<%= user._id %>/image/del/<%= egyImage._id %>';" class="btn btn-danger">Delete</button>
+        </div>
+        <% }); %>
+        <!-- Add Masterpiece Button -->
+        <a onclick="window.location.href ='/dashboard/<%= user._id %>/image/new';" class="btn btn-primary">Add Masterpiece</a>
+    </div>
+
+    <%- include('header') -%>
+
+
+

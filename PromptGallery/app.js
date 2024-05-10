@@ -1,14 +1,20 @@
 const express = require('express');
 const path = require('path');
 const app = express();
+const bodyParser = require('body-parser');
+const session = require('express-session');
 
-// Serve static files from the "public" directory
-app.use(express.static(path.join(__dirname, 'static')));
 
-app.get('/', (req, res) => {
-  // Send the register.html file when a GET request is made to the root URL
-  res.sendFile(path.join(__dirname, 'static', 'register.html'));
-});
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, 'views'));
+app.use(express.urlencoded({extended: true}));
+app.use(express.json());
+app.use(session({
+  secret: 'secret'
+}));
+
+require('./route/index.js')(app);
 
 app.listen(3000, () => {
   console.log('App is listening on port 3000');
